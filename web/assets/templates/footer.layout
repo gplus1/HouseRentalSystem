@@ -1,0 +1,5 @@
+{{ template "navbar.html" . }}
+
+{{ template "index.html" . }}
+
+{{ template "footer.html" . }}
