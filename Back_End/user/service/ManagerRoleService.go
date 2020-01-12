@@ -1,15 +1,13 @@
 package service
 
 import (
-	import "github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
-	import "github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/users/Manager"
 )
-
 
 type RoleService struct {
 	roleRepo Manager.RoleRepository
 }
-
 
 func NewRoleService(RoleRepo Manager.RoleRepository) Manager.RoleService {
 	return &RoleService{roleRepo: RoleRepo}
@@ -26,7 +24,6 @@ func (MrS *RoleService) Roles() ([]entity.Role, []error) {
 
 }
 
-
 func (MrS *RoleService) Role(id uint) (*entity.Role, []error) {
 	rl, erMrS := MrS.roleRepo.Role(id)
 	if len(erMrS) > 0 {
@@ -35,7 +32,6 @@ func (MrS *RoleService) Role(id uint) (*entity.Role, []error) {
 	return rl, erMrS
 
 }
-
 
 func (MrS *RoleService) UpdateRole(role *entity.Role) (*entity.Role, []error) {
 	rl, erMrS := MrS.roleRepo.UpdateRole(role)
@@ -46,7 +42,6 @@ func (MrS *RoleService) UpdateRole(role *entity.Role) (*entity.Role, []error) {
 
 }
 
-
 func (MrS *RoleService) DeleteRole(id uint) (*entity.Role, []error) {
 
 	rl, erMrS := MrS.roleRepo.DeleteRole(id)
@@ -55,7 +50,6 @@ func (MrS *RoleService) DeleteRole(id uint) (*entity.Role, []error) {
 	}
 	return rl, erMrS
 }
-
 
 func (MrS *RoleService) StoreRole(role *entity.Role) (*entity.Role, []error) {
 

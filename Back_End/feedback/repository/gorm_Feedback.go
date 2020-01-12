@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/HouseRentalSystem/Back_End/entity"
-	"github.com/HouseRentalSystem/Back_End/Feedback"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/feedback"
 	"github.com/jinzhu/gorm"
 )
 

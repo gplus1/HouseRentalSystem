@@ -8,9 +8,9 @@ import (
 	"github.com/gplus1/HouseRentalSystem/Back_End/delivery/http/handler"
 	urepim "github.com/gplus1/HouseRentalSystem/Back_End/user/repository"
 	usrvim "github.com/gplus1/HouseRentalSystem/Back_End/user/service"
-	"github.com/gplus1/jinzhu/gorm"
-	_ "github.com/gplus1/jinzhu/gorm/dialects/postgres"
-	"github.com/gplus1/julienschmidt/httprouter"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
+	"github.com/julienschmidt/httprouter"
 )
 
 func main() {

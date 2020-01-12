@@ -1,19 +1,17 @@
 package service
 
 import (
-	import "github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
-	import "github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/users/Admin"
 )
 
 type RoleService struct {
 	roleRepo Admin.RoleRepository
 }
 
-
 func NewRoleService(RoleRepo Admin.RoleRepository) Admin.RoleService {
 	return &RoleService{roleRepo: RoleRepo}
 }
-
 
 func (ArS *RoleService) Roles() ([]entity.Role, []error) {
 
@@ -25,7 +23,6 @@ func (ArS *RoleService) Roles() ([]entity.Role, []error) {
 
 }
 
-
 func (ArS *RoleService) Role(id uint) (*entity.Role, []error) {
 	rl, erArS := ArS.roleRepo.Role(id)
 	if len(erArS) > 0 {
@@ -34,7 +31,6 @@ func (ArS *RoleService) Role(id uint) (*entity.Role, []error) {
 	return rl, erArS
 
 }
-
 
 func (ArS *RoleService) UpdateRole(role *entity.Role) (*entity.Role, []error) {
 	rl, erArS := ArS.roleRepo.UpdateRole(role)
@@ -45,7 +41,6 @@ func (ArS *RoleService) UpdateRole(role *entity.Role) (*entity.Role, []error) {
 
 }
 
-
 func (ArS *RoleService) DeleteRole(id uint) (*entity.Role, []error) {
 
 	rl, erArS := ArS.roleRepo.DeleteRole(id)
@@ -54,7 +49,6 @@ func (ArS *RoleService) DeleteRole(id uint) (*entity.Role, []error) {
 	}
 	return rl, erArS
 }
-
 
 func (ArS *RoleService) StoreRole(role *entity.Role) (*entity.Role, []error) {
 

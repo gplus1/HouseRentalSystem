@@ -1,13 +1,37 @@
-package user
+package service
 
-import "github.com/betsegawlemma/restaurant/entity"
+import (
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+)
 
-type UserService interface {
-	Users() ([]entity.User, []error)
-	User(id uint) (*entity.User, []error)
-	UpdateUser(user *entity.User) (*entity.User, []error)
-	DeleteUser(id uint) (*entity.User, []error)
-	StoreUser(user *entity.User) (*entity.User, []error)
+type AdminService interface {
+	Admins() ([]entity.Admin, []error)
+	Admin(id uint) (*entity.Admin, []error)
+	UpdateAdmin(Admin *entity.Admin) (*entity.Admin, []error)
+	DeleteAdmin(id uint) (*entity.Admin, []error)
+	StoreAdmin(Admin *entity.Admin) (*entity.Admin, []error)
+}
+type ManagerService interface {
+	Managers() ([]entity.Manager, []error)
+	Manager(id uint) (*entity.Manager, []error)
+	UpdateManager(Manager *entity.Manager) (*entity.Manager, []error)
+	DeleteManager(id uint) (*entity.Manager, []error)
+	StoreManager(Manager *entity.Manager) (*entity.Manager, []error)
+}
+type LandLordService interface {
+	LandLords() ([]entity.LandLord, []error)
+	LandLord(id uint) (*entity.LandLord, []error)
+	UpdateLandLord(LandLord *entity.LandLord) (*entity.LandLord, []error)
+	DeleteLandLord(id uint) (*entity.LandLord, []error)
+	StoreLandLord(LandLord *entity.LandLord) (*entity.LandLord, []error)
+}
+type TouristService interface {
+	Tourists() ([]entity.Tourist, []error)
+	Tourist(id uint) (*entity.Tourist, []error)
+	UpdateTourist(Tourist *entity.Tourist) (*entity.Tourist, []error)
+	DeleteTourist(id uint) (*entity.Tourist, []error)
+	StoreTourist(Tourist *entity.Tourist) (*entity.Tourist, []error)
 }
 
 type RoleService interface {

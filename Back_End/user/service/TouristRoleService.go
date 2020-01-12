@@ -1,8 +1,8 @@
 package service
 
 import (
-	import "github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
-	import "github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
 )
 
 

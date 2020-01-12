@@ -1,14 +1,16 @@
 package user
 
-import "github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
-import "github.com/betsegawlemma/restaurant/entity/users"
+import (
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
+ "github.com/gplus1/HouseRentalSystem/Back_End/entity"
+)
 
 type ManagerRepository interface {
-	Managers() ([]entity.Manager, []error)
-	Manager(id uint) (*entity.Manager, []error)
-	UpdateManager(Manager *entity.Manager) (*entity.Manager, []error)
-	DeleteManager(id uint) (*entity.Manager, []error)
-	StoreManager(Manager *entity.Manager) (*entity.Manager, []error)
+	Managers() ([]Manager.Manager, []error)
+	Manager(id uint) (*Manager.Manager, []error)
+	UpdateManager(Manager *Manager.Manager) (*Manager.Manager, []error)
+	DeleteManager(id uint) (*Manager.Manager, []error)
+	StoreManager(Manager *Manager.Manager) (*Manager.Manager, []error)
 }
 
 

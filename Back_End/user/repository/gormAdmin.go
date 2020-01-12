@@ -1,9 +1,9 @@
 package repository
 
 import (
-	"github.com/gplus1/betsegawlemma/restaurant/Admin"
-	"github.com/gplus1/betsegawlemma/restaurant/entity"
-	"github.com/gplus1/jinzhu/gorm"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/users/Admin"
+	"github.com/jinzhu/gorm"
 )
 
 type AdminGormRepo struct {

@@ -2,7 +2,7 @@ package users
 
 import (
 	"time"
-	"github.com/HouseRentalSystem/Back_End/entity"
+	"github.com/HouseRentalSystem/Back_End/entity/users"
 )
 type Admin struct {
 	gorm.Model

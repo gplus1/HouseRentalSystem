@@ -1,14 +1,14 @@
 package user
 
 import "github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
-import "github.com/betsegawlemma/restaurant/entity/users"
+import "github.com/gplus1/HouseRentalSystem/Back_End/entity"
 
 type AdminRepository interface {
-	Admins() ([]entity.Admin, []error)
-	Admin(id uint) (*entity.Admin, []error)
-	UpdateAdmin(Admin *entity.Admin) (*entity.Admin, []error)
-	DeleteAdmin(id uint) (*entity.Admin, []error)
-	StoreAdmin(Admin *entity.Admin) (*entity.Admin, []error)
+	Admins() ([]Admin.Admin, []error)
+	Admin(id uint) (*Admin.Admin, []error)
+	UpdateAdmin(Admin *Admin.Admin) (*Admin.Admin, []error)
+	DeleteAdmin(id uint) (*Admin.Admin, []error)
+	StoreAdmin(Admin *Admin.Admin) (*Admin.Admin, []error)
 }
 
 

@@ -2,7 +2,7 @@ package Reservation
 
 import "github.com/gplus1/HouseRentalSystem/Back_End/entity/users"
 
-//ReservationService specifies customer menu Reservation related services
+
 type ReservationService interface {
 	Reservations() ([]entity.Reservation, []error)
 	Reservation(id uint) (*entity.Reservation, []error)

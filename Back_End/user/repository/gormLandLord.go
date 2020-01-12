@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/gplus1/HouseRentalSystem/Back_End/LandLord"
+	"github.com/gplus1/HouseRentalSystem/Back_End/user/LandLordRepository"
 	"github.com/gplus1/HouseRentalSystem/Back_End/user"
 	"github.com/gplus1/jinzhu/gorm"
 )

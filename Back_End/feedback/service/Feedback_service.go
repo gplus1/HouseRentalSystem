@@ -1,7 +1,7 @@
 package service
 
 import (
-	"github.com/HouseRentalSystem/Back_End/Feedback"
+	"github.com/HouseRentalSystem/Back_End/feedback"
 	"github.com/HouseRentalSystem/Back_End/entity"
 
 )
