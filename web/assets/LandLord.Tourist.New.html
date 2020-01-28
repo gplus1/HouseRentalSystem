@@ -1,0 +1,46 @@
+{{ define "LandLord.Tourists.layout" }}
+{{ template "LandLord.navbar" . }}
+{{ template "LandLord.Tourists.content" . }}
+{{ template "LandLord.footer"  }}
+{{ end }}
+
+{{ define "LandLord.Tourists.content"}}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2>Application Users</h2>
+  </div>
+  <div class="pt-3 pb-2 mb-3">
+    <a class="btn btn-primary btn-lg" href="/LandLord/Tourists/new" role="button">New Tourist</a>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FullName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Password</th>
+        <th scope="col">RoleID</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .Users }}
+      <tr>
+        <td> {{ .ID }} </td>
+        <td> {{ .FullName }} </td>
+        <td> {{ .Email }} </td>
+        <td> {{ .Phone }} </td>
+        <td> {{ .Country }} </td>
+        <td> {{ .State }} </td>
+        <td> {{ .City }} </td>
+        <td> {{ .HouseNo }} </td>
+        <td> {{ .Password }} </td>
+        <td> {{ .RoleID }} </td>
+        <td> <a href="/LandLord/Tourists/update?id={{ .ID }}">Edit</a> </td>
+        <td> <a href="/LandLord/Tourists/delete?id={{ .ID }}">Delete</a> </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</main>
+{{ end }}

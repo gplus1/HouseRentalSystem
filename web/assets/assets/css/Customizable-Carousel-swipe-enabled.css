@@ -1,0 +1,16 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.item.col-xs-4.col-lg-4 {
+  width: 200px;
+  height: 400px;
+}
+
+.thumbnail {
+}
+
+.group.list-group-image {
+  height: 200px;
+}
+
