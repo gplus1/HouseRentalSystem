@@ -8,17 +8,17 @@ import (
 	"github.com/gplus1/julienschmidt/httprouter"
 )
 
-// landLordRoleHandler is used to implement role related http requests
+/ landLordRoleHandler is used to implement role related http requests
 type landLordRoleHandler struct {
 	roleService user.RoleService
 }
 
-// NewlandLordRoleHandler initializes and returns new landLordRoleHandler object
+/ NewlandLordRoleHandler initializes and returns new landLordRoleHandler object
 func NewlandLordRoleHandler(roleSrv user.RoleService) *landLordRoleHandler {
 	return &landLordRoleHandler{roleService: roleSrv}
 }
 
-// GetRoles handles GET /v1/landLord/roles requests
+/ GetRoles handles GET /v1/landLord/roles requests
 func (arh *landLordRoleHandler) GetRoles(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
@@ -44,25 +44,25 @@ func (arh *landLordRoleHandler) GetRoles(w http.ResponseWriter,
 
 }
 
-// GetSingleRole handles GET /v1/landLord/roles/:id requests
+/ GetSingleRole handles GET /v1/landLord/roles/:id requests
 func (arh *landLordRoleHandler) GetSingleRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
 
-// PutRole handles PUT /v1/landLord/roles/:id requests
+/ PutRole handles PUT /v1/landLord/roles/:id requests
 func (arh *landLordRoleHandler) PutRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
 
-// PostRole handles POST /v1/landLord/roles requests
+/ PostRole handles POST /v1/landLord/roles requests
 func (arh *landLordRoleHandler) PostRole(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
 }
 
-// DeleteRole handles DELETE /v1/landLord/roles/:id requests
+/ DeleteRole handles DELETE /v1/landLord/roles/:id requests
 func (arh *landLordRoleHandler) DeleteRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 

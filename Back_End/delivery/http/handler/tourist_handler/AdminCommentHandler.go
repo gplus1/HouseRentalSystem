@@ -11,17 +11,17 @@ import (
 	"github.com/gplus1/julienschmidt/httprouter"
 )
 
-// landLordFeedBackHandler handles FeedBack related http requests
+/ landLordFeedBackHandler handles FeedBack related http requests
 type landLordFeedBackHandler struct {
 	FeedBackService FeedBack.FeedBackService
 }
 
-// NewlandLordFeedBackHandler returns new landLordFeedBackHandler object
+/ NewlandLordFeedBackHandler returns new landLordFeedBackHandler object
 func NewlandLordFeedBackHandler(cmntService FeedBack.FeedBackService) *landLordFeedBackHandler {
 	return &landLordFeedBackHandler{FeedBackService: cmntService}
 }
 
-// GetFeedBacks handles GET /v1/landLord/FeedBacks request
+/ GetFeedBacks handles GET /v1/landLord/FeedBacks request
 func (ach *landLordFeedBackHandler) GetFeedBacks(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
@@ -47,7 +47,7 @@ func (ach *landLordFeedBackHandler) GetFeedBacks(w http.ResponseWriter,
 
 }
 
-// GetSingleFeedBack handles GET /v1/landLord/FeedBacks/:id request
+/ GetSingleFeedBack handles GET /v1/landLord/FeedBacks/:id request
 func (ach *landLordFeedBackHandler) GetSingleFeedBack(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
@@ -80,7 +80,7 @@ func (ach *landLordFeedBackHandler) GetSingleFeedBack(w http.ResponseWriter,
 	return
 }
 
-// PostFeedBack handles POST /v1/landLord/FeedBacks request
+/ PostFeedBack handles POST /v1/landLord/FeedBacks request
 func (ach *landLordFeedBackHandler) PostFeedBack(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	l := r.ContentLength
@@ -110,7 +110,7 @@ func (ach *landLordFeedBackHandler) PostFeedBack(w http.ResponseWriter, r *http.
 	return
 }
 
-// PutFeedBack handles PUT /v1/landLord/FeedBacks/:id request
+/ PutFeedBack handles PUT /v1/landLord/FeedBacks/:id request
 func (ach *landLordFeedBackHandler) PutFeedBack(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	id, err := strconv.Atoi(ps.ByName("id"))
@@ -157,7 +157,7 @@ func (ach *landLordFeedBackHandler) PutFeedBack(w http.ResponseWriter, r *http.R
 	return
 }
 
-// DeleteFeedBack handles DELETE /v1/landLord/FeedBacks/:id request
+/ DeleteFeedBack handles DELETE /v1/landLord/FeedBacks/:id request
 func (ach *landLordFeedBackHandler) DeleteFeedBack(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	id, err := strconv.Atoi(ps.ByName("id"))

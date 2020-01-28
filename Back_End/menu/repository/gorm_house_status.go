@@ -1,22 +1,22 @@
 package repository
 
 import (
-	"github.com/HouseRentalSystem/Back_End/entity"
-	"github.com/HouseRentalSystem/Back_End/entity/menu"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/menu"
 	"github.com/jinzhu/gorm"
 )
 
-//house status
+/house status
 type HouseStatusGormRepo struct {
 	conn *gorm.DB
 }
 
-//creating new house status
+/creating new house status
 func NewHouseStatusGormRepo(db *gorm.DB) menu.HouseStatusRepository {
 	return &HouseStatusGormRepo{conn: db}
 }
 
-//house status
+/house status
 func (HsRepo *HouseStatusGormRepo) HouseStatuss() ([]entity.HouseStatus, []error) {
 	ingts := []entity.HouseStatus{}
 	errs := HsRepo.conn.Find(&ingts).GetErrors()
@@ -26,7 +26,7 @@ func (HsRepo *HouseStatusGormRepo) HouseStatuss() ([]entity.HouseStatus, []error
 	return ingts, errs
 }
 
-//house status
+/house status
 func (HsRepo *HouseStatusGormRepo) HouseStatus(id uint) (*entity.HouseStatus, []error) {
 	ingt := entity.HouseStatus{}
 	errs := HsRepo.conn.First(&ingt, id).GetErrors()
@@ -35,7 +35,7 @@ func (HsRepo *HouseStatusGormRepo) HouseStatus(id uint) (*entity.HouseStatus, []
 	}
 	return &ingt, errs
 }
-//update status
+/update status
 func (HsRepo *HouseStatusGormRepo) UpdateHouseStatus(HouseStatus *entity.HouseStatus) (*entity.HouseStatus, []error) {
 	ingt := HouseStatus
 	errs := HsRepo.conn.Save(ingt).GetErrors()
@@ -44,7 +44,7 @@ func (HsRepo *HouseStatusGormRepo) UpdateHouseStatus(HouseStatus *entity.HouseSt
 	}
 	return ingt, errs
 }
-//delete status
+/delete status
 func (HsRepo *HouseStatusGormRepo) DeleteHouseStatus(id uint) (*entity.HouseStatus, []error) {
 	ingt, errs := HsRepo.HouseStatus(id)
 
@@ -58,7 +58,7 @@ func (HsRepo *HouseStatusGormRepo) DeleteHouseStatus(id uint) (*entity.HouseStat
 	}
 	return ingt, errs
 }
-//store status
+/store status
 func (HsRepo *HouseStatusGormRepo) StoreHouseStatus(HouseStatus *entity.HouseStatus) (*entity.HouseStatus, []error) {
 	ingt := HouseStatus
 	errs := HsRepo.conn.Create(ingt).GetErrors()

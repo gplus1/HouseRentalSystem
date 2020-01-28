@@ -41,3 +41,8 @@ type RoleService interface {
 	DeleteRole(id uint) (*entity.Role, []error)
 	StoreRole(role *entity.Role) (*entity.Role, []error)
 }
+type SessionService interface {
+	Session(sessionID string) (*entity.Session, []error)
+	StoreSession(session *entity.Session) (*entity.Session, []error)
+	DeleteSession(sessionID string) (*entity.Session, []error)
+}

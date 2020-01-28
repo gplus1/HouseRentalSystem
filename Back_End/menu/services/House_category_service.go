@@ -1,21 +1,21 @@
 package service
 
 import (
-	"github.com/HouseRentalSystem/Back_End/entity"
-	"github.com/HouseRentalSystem/Back_End/entity/menu"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/menu"
 )
 
-// H_catagory_service implements menu.H_catagory_service interface
+/ H_catagory_service implements menu.H_catagory_service interface
 type H_catagory_service struct {
 	categoryRepo menu.CategoryRepository
 }
 
-// NewH_catagory_service will create new H_catagory_service object
+/ NewH_catagory_service will create new H_catagory_service object
 func NewH_catagory_service(CatRepo menu.CategoryRepository) menu.H_catagory_service {
 	return &H_catagory_service{categoryRepo: CatRepo}
 }
 
-// Categories returns list of categories
+/ Categories returns list of categories
 func (HcS *H_catagory_service) Categories() ([]entity.Category, []error) {
 
 	categories, errs := HcS.categoryRepo.Categories()

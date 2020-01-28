@@ -1,6 +1,6 @@
 package FeedBack
 
-"github.com/HouseRentalSystem/Back_End/entity"
+"github.com/gplus1/HouseRentalSystem/Back_End/entity"
 
 
 type FeedBackervice interface {

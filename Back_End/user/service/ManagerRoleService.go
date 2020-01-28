@@ -13,7 +13,7 @@ func NewRoleService(RoleRepo Manager.RoleRepository) Manager.RoleService {
 	return &RoleService{roleRepo: RoleRepo}
 }
 
-//MrS stands for Manager Role Service
+/MrS stands for Manager Role Service
 func (MrS *RoleService) Roles() ([]entity.Role, []error) {
 
 	rls, erMrS := MrS.roleRepo.Roles()

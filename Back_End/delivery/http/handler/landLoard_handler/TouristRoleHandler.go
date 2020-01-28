@@ -8,17 +8,17 @@ import (
 	"github.com/gplus1/julienschmidt/httprouter"
 )
 
-// TouristRoleHandler is used to implement role related http requests
+/ TouristRoleHandler is used to implement role related http requests
 type TouristRoleHandler struct {
 	roleService user.RoleService
 }
 
-// NewTouristRoleHandler initializes and returns new TouristRoleHandler object
+/ NewTouristRoleHandler initializes and returns new TouristRoleHandler object
 func NewTouristRoleHandler(roleSrv user.RoleService) *TouristRoleHandler {
 	return &TouristRoleHandler{roleService: roleSrv}
 }
 
-// GetRoles handles GET /v1/Tourist/roles requests
+/ GetRoles handles GET /v1/Tourist/roles requests
 func (arh *TouristRoleHandler) GetRoles(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
@@ -44,25 +44,25 @@ func (arh *TouristRoleHandler) GetRoles(w http.ResponseWriter,
 
 }
 
-// GetSingleRole handles GET /v1/Tourist/roles/:id requests
+/ GetSingleRole handles GET /v1/Tourist/roles/:id requests
 func (arh *TouristRoleHandler) GetSingleRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
 
-// PutRole handles PUT /v1/Tourist/roles/:id requests
+/ PutRole handles PUT /v1/Tourist/roles/:id requests
 func (arh *TouristRoleHandler) PutRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
 
-// PostRole handles POST /v1/Tourist/roles requests
+/ PostRole handles POST /v1/Tourist/roles requests
 func (arh *TouristRoleHandler) PostRole(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
 }
 
-// DeleteRole handles DELETE /v1/Tourist/roles/:id requests
+/ DeleteRole handles DELETE /v1/Tourist/roles/:id requests
 func (arh *TouristRoleHandler) DeleteRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 

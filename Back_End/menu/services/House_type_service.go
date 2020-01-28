@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/HouseRentalSystem/Back_End/entity"
-	"github.com/HouseRentalSystem/Back_End/entity/menu"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity"
+	"github.com/gplus1/HouseRentalSystem/Back_End/entity/menu"
 )
 
 type HTypeservice struct {

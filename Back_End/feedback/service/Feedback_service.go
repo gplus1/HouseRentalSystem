@@ -6,17 +6,17 @@ import (
 
 )
 
-// FeedBackService implements menu.FeedBackService interface
+/ FeedBackService implements menu.FeedBackService interface
 type FeedBackService struct {
 	FeedBackRepo FeedBack.FeedBackRepository
 }
 
-// NewFeedBackService returns a new FeedBackService object
+/ NewFeedBackService returns a new FeedBackService object
 func NewFeedBackService(commRepo FeedBack.FeedBackRepository) FeedBack.FeedBackService {
 	return &FeedBackService{FeedBackRepo: commRepo}
 }
 
-// FeedBacks returns all stored FeedBacks
+/ FeedBacks returns all stored FeedBacks
 func (cs *FeedBackService) FeedBacks() ([]entity.FeedBack, []error) {
 	cmnts, errs := cs.FeedBackRepo.FeedBacks()
 	if len(errs) > 0 {
@@ -25,7 +25,7 @@ func (cs *FeedBackService) FeedBacks() ([]entity.FeedBack, []error) {
 	return cmnts, errs
 }
 
-// FeedBack retrieves stored FeedBack by its id
+/ FeedBack retrieves stored FeedBack by its id
 func (cs *FeedBackService) FeedBack(id uint) (*entity.FeedBack, []error) {
 	cmnt, errs := cs.FeedBackRepo.FeedBack(id)
 	if len(errs) > 0 {
@@ -34,7 +34,7 @@ func (cs *FeedBackService) FeedBack(id uint) (*entity.FeedBack, []error) {
 	return cmnt, errs
 }
 
-// UpdateFeedBack updates a given FeedBack
+/ UpdateFeedBack updates a given FeedBack
 func (cs *FeedBackService) UpdateFeedBack(FeedBack *entity.FeedBack) (*entity.FeedBack, []error) {
 	cmnt, errs := cs.FeedBackRepo.UpdateFeedBack(FeedBack)
 	if len(errs) > 0 {
@@ -43,7 +43,7 @@ func (cs *FeedBackService) UpdateFeedBack(FeedBack *entity.FeedBack) (*entity.Fe
 	return cmnt, errs
 }
 
-// DeleteFeedBack deletes a given FeedBack
+/ DeleteFeedBack deletes a given FeedBack
 func (cs *FeedBackService) DeleteFeedBack(id uint) (*entity.FeedBack, []error) {
 	cmnt, errs := cs.FeedBackRepo.DeleteFeedBack(id)
 	if len(errs) > 0 {
@@ -52,7 +52,7 @@ func (cs *FeedBackService) DeleteFeedBack(id uint) (*entity.FeedBack, []error) {
 	return cmnt, errs
 }
 
-// StoreFeedBack stores a given FeedBack
+/ StoreFeedBack stores a given FeedBack
 func (cs *FeedBackService) StoreFeedBack(FeedBack *entity.FeedBack) (*entity.FeedBack, []error) {
 	cmnt, errs := cs.FeedBackRepo.StoreFeedBack(FeedBack)
 	if len(errs) > 0 {

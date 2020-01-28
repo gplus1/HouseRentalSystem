@@ -3,7 +3,7 @@ package repository
 import (
 	"github.com/gplus1/HouseRentalSystem/Back_End/Tourist"
 	"github.com/gplus1/HouseRentalSystem/Back_End/user"
-	"github.com/gplus1/jinzhu/gorm"
+	"github.com/jinzhu/gorm"
 )
 
 type TouristGormRepo struct {
