@@ -30,7 +30,6 @@ type HouseStatus struct {
 	ID          uint
 	Name        string `gorm:"type:varchar(255);not null"`
 	Description string
-	Countries string `gorm:"type:varchar(255)"`
 }
 
 type Reservation struct {

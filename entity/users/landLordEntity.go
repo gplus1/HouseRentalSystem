@@ -2,7 +2,7 @@ package users
 
 import (
 	"time"
-	"github.com/HouseRentalSystem/Back_End/entity"
+	"github.com/HouseRentalSystem/entity/users"
 )
 type LandLord struct {
 	gorm.Model
@@ -16,7 +16,6 @@ type LandLord struct {
 	HouseNo string `gorm:"type:varchar(50); not null; unique"`
 	Phone    string `gorm:"type:varchar(100);not null; unique"`
 	Password string `gorm:"type:varchar(100)"`
-	Roles    []Role `gorm:"many2many:user_roles"`
-	Reservation   []Reservation
+	
 }
 

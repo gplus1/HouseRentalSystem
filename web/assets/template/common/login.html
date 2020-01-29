@@ -1,0 +1,75 @@
+{{define "login"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HouseRentalSystem</title>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../../fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../../fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="../../css/Animated-Pretty-Product-List-v12.css">
+    <link rel="stylesheet" href="../../css/card-image-zoom-on-hover.css">
+    <link rel="stylesheet" href="../../css/Customizable-Carousel-swipe-enabled.css">
+    <link rel="stylesheet" href="../../css/Dark-Footer-1.css">
+    <link rel="stylesheet" href="../../css/Dark-Footer-2.css">
+    <link rel="stylesheet" href="../../css/Dark-Footer.css">
+    <link rel="stylesheet" href="../../css/Dark-NavBar-1.css">
+    <link rel="stylesheet" href="../../css/Dark-NavBar-2.css">
+    <link rel="stylesheet" href="../../css/Dark-NavBar.css">
+    <link rel="stylesheet" href="../../css/Grid-and-List-view-V10-1.css">
+    <link rel="stylesheet" href="../../css/Grid-and-List-view-V10.css">
+    <link rel="stylesheet" href="../../css/Hero-Travel.css">
+    <link rel="stylesheet" href="../../css/Login-Form-Dark-1.css">
+    <link rel="stylesheet" href="../../css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="../../css/PHP-Contact-Form-dark-1.css">
+    <link rel="stylesheet" href="../../css/PHP-Contact-Form-dark.css">
+    <link rel="stylesheet" href="../../css/Profile-Edit-Form-1.css">
+    <link rel="stylesheet" href="../../css/Profile-Edit-Form.css">
+    <link rel="stylesheet" href="../../css/Responsive-Form-1.css">
+    <link rel="stylesheet" href="../../css/Responsive-Form.css">
+    <link rel="stylesheet" href="../../css/Search-Input-responsive.css">
+    <link rel="stylesheet" href="../../css/select2.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/Tourist-Information-Panel---Lite--Secondary-Tourist-Panel-Footer.css">
+    <link rel="stylesheet" href="../../css/WOWSlider-about-us-1.css">
+    <link rel="stylesheet" href="../../css/WOWSlider-about-us-2.css">
+    <link rel="stylesheet" href="../../css/WOWSlider-about-us.css">
+</head>
+
+<body>
+    <div class="login-dark">
+        <form method="post">
+            <h2 class="sr-only">Login Form</h2>
+
+            <input type="hidden" name="_csrf" value="{{ .CSRF }}" />
+            {{with .VErrors.Get "generic" }}
+            <label class="text-danger">{{ . }}</label>
+            {{end}}
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"value='{{.Value.Get "email"}}'></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"value='{{.Value.Get "password"}}'></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/Customizable-Carousel-swipe-enabled.js"></script>
+    <script src="../../js/Animated-Pretty-Product-List-v12.js"></script>
+    <script src="../../js/Grid-and-List-view-V10.js"></script>
+    <script src="../../js/PHP-Contact-Form-dark-1.js"></script>
+    <script src="../../js/PHP-Contact-Form-dark.js"></script>
+    <script src="../../js/Profile-Edit-Form.js"></script>
+    <script src="../../js/select2-1.js"></script>
+    <script src="../../js/select2-2.js"></script>
+    <script src="../../js/select2-3.js"></script>
+    <script src="../../js/select2-4.js"></script>
+    <script src="../../js/select2-5.js"></script>
+    <script src="../../js/select2-6.js"></script>
+    <script src="../../js/select2.js"></script>
+    <script src="../../js/WOWSlider-about-us.js"></script>
+{{end}}

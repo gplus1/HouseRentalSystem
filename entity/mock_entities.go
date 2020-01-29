@@ -38,7 +38,7 @@ var HouseStatusMock = HouseStatus{
 // ReservationMock mocks customer Reservation
 var ReservationMock = Reservation{
 	ID:        1,
-	CreatedAt: time.Time{},
+	CreatedAt: time.Time,
 	UserID:    1,
 	HouseTypeID:    1,
 	Quantity:  100,

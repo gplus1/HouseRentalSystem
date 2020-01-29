@@ -2,10 +2,10 @@ package users
 
 import (
 	"time"
-	"github.com/HouseRentalSystem/Back_End/entity"
+	"github.com/HouseRentalSystem/entity"
 )
 type Tourist struct {
-	gorm.Model
+	
 	ID       uint
 	UserName string `gorm:"type:varchar(100);not null"`
 	FullName string `gorm:"type:varchar(100);not null"`
