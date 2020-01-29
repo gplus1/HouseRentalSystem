@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/gplus1/HouseRentalSystem//FeedBack"
-	"github.com/gplus1/HouseRentalSystem//entity"
+	"github.com/gplus1/HouseRentalSystem/FeedBack"
+	"github.com/gplus1/HouseRentalSystem/entity"
 	"github.com/gplus1/julienschmidt/httprouter"
 )
 
-//landLordFeedBackapi handles FeedBack related http requests
+/landLordFeedBackapi handles FeedBack related http requests
 type landLordFeedBackapi struct {
 	FeedBackService FeedBack.FeedBackService
 }

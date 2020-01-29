@@ -4,22 +4,21 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/gplus1/HouseRentalSystem//Tourist"
+	"github.com/gplus1/HouseRentalSystem/user"
 	"github.com/gplus1/julienschmidt/httprouter"
 )
 
- //landLordRoleHandler is used to implement role related http requests
-type landLordRoleHandler struct {
+type TouristRoleHandler struct {
 	roleService Tourist.RoleService
 }
 
-/ NewlandLordRoleHandler initializes and returns new landLordRoleHandler object
-func NewlandLordRoleHandler(roleSrv Tourist.RoleService) *landLordRoleHandler {
-	return &landLordRoleHandler{roleService: roleSrv}
+/ NewTouristRoleHandler initializes and returns new TouristRoleHandler object
+func NewTouristRoleHandler(roleSrv Tourist.RoleService) *TouristRoleHandler {
+	return &TouristRoleHandler{roleService: roleSrv}
 }
 
-/ GetRoles handles GET /v1/landLord/roles requests
-func (arh *landLordRoleHandler) GetRoles(w http.ResponseWriter,
+/ GetRoles handles GET /v1/Tourist/roles requests
+func (arh *TouristRoleHandler) GetRoles(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
 	roles, errs := arh.roleService.Roles()
@@ -44,26 +43,26 @@ func (arh *landLordRoleHandler) GetRoles(w http.ResponseWriter,
 
 }
 
-/ GetSingleRole handles GET /v1/landLord/roles/:id requests
-func (arh *landLordRoleHandler) GetSingleRole(w http.ResponseWriter,
+/ GetSingleRole handles GET /v1/Tourist/roles/:id requests
+func (arh *TouristRoleHandler) GetSingleRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
 
-/ PutRole handles PUT /v1/landLord/roles/:id requests
-func (arh *landLordRoleHandler) PutRole(w http.ResponseWriter,
+/ PutRole handles PUT /v1/Tourist/roles/:id requests
+func (arh *TouristRoleHandler) PutRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
 
-/ PostRole handles POST /v1/landLord/roles requests
-func (arh *landLordRoleHandler) PostRole(w http.ResponseWriter,
+/ PostRole handles POST /v1/Tourist/roles requests
+func (arh *TouristRoleHandler) PostRole(w http.ResponseWriter,
 	r *http.Request, _ httprouter.Params) {
 
 }
 
-/ DeleteRole handles DELETE /v1/landLord/roles/:id requests
-func (arh *landLordRoleHandler) DeleteRole(w http.ResponseWriter,
+/ DeleteRole handles DELETE /v1/Tourist/roles/:id requests
+func (arh *TouristRoleHandler) DeleteRole(w http.ResponseWriter,
 	r *http.Request, ps httprouter.Params) {
 
 }
